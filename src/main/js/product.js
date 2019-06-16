@@ -35,7 +35,7 @@ export default class Product extends React.Component{
 	            }
 	        }).then(function (response) {
 	        	 alert("Successfully deleted!!");
-	        	 self.props.fetch();
+	        	 self.props.me.fetchProducts();
 	        }).catch(function (error) {
 	        	alert("Unauthorized operation!!");
 	          });
