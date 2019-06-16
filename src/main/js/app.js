@@ -16,10 +16,10 @@ export default class App extends React.Component {
 		this.fetchProducts();
 	}
 	
-	render() {debugger;
+	render() {
 		return  (
-				<div><h4>Products</h4>
-			<ProductList products={this.state.products}/></div>
+				<div className='center'><h2>Online Retail Products within Budget</h2>
+			<ProductList products={this.state.products} fetch={this.fetchProducts}/></div>
 		);
 	}
 	
