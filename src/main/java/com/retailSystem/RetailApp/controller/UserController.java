@@ -22,7 +22,7 @@ public class UserController {
 	private RetailUserDetailsService retailUserDetailsService;
 	
 	@PostMapping
-	public ResponseEntity<?> addorUpdateExpense(@RequestBody User user) {
+	public ResponseEntity<?> addorUpdateUser(@RequestBody User user) {
 		retailUserDetailsService.saveUser(user);
 		return new ResponseEntity("User added succcessfully", HttpStatus.OK);
 	}
@@ -33,7 +33,7 @@ public class UserController {
 	}
 
 	@DeleteMapping
-	public ResponseEntity<?> deleteExpense(@RequestParam("id") String id) {
+	public ResponseEntity<?> deleteUser(@RequestParam("id") String id) {
 		retailUserDetailsService.deleteProduct(id);
 		return new ResponseEntity("User deleted succcessfully", HttpStatus.OK);
 	}
